@@ -32,7 +32,9 @@ namespace UpdateSample
                 var updateResult = await manager.CheckForUpdate();
                 if (updateResult.ReleasesToApply.Count > 0)
                 {
-                    var result = MessageBox.Show("Update available, Do you want to update ?", "Update Sample", MessageBoxButton.OKCancel);
+                    var result = MessageBox.Show("Update available, Do you want to update ?", 
+                                                              "Update Sample", 
+                                                              MessageBoxButton.OKCancel);
                     if (result == MessageBoxResult.OK)
                     {
                         await manager.UpdateApp();
